@@ -604,20 +604,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="mysql2 (vbundled(0.4.10)) [path][gem]">
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/mysql2-0.4.10/ext" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/mysql2-0.4.10/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/mysql2-0.4.10/support" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/mysql2-0.4.10/ext" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/mysql2-0.4.10/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/mysql2-0.4.10/support" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
       <library name="nio4r (vbundled(2.3.1)) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/nio4r-2.3.1/tasks" />
@@ -704,22 +690,6 @@
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/powerpack-0.1.1/lib" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="puma (vbundled(3.11.4)) [path][gem]">
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/puma-3.11.4/ext" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/puma-3.11.4/bin" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/puma-3.11.4/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/puma-3.11.4/tools" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/puma-3.11.4/ext" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/puma-3.11.4/bin" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/puma-3.11.4/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/puma-3.11.4/tools" />
         </SOURCES>
       </library>
     </orderEntry>

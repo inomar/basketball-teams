@@ -173,3 +173,8 @@ fabric.properties
 
 
 # End of https://www.gitignore.io/api/node,rails,rubymine
+/public/packs
+/public/packs-test
+/node_modules
+yarn-debug.log*
+.yarn-integrity
