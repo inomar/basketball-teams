@@ -25,8 +25,22 @@
         </form>
       　<ul class="navbar-nav">
           <% if user_signed_in? %>
-            <li class="nav-item">
-              <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+            <li class="nav-item dropdown">
+              <%= link_to '#', class: '', data: {toggle: 'dropdown'} do %>
+                <% if current_user.image.nil? %>
+                  <%= image_tag 'https://pics.prcm.jp/638bee63bc5e4/72592090/png/72592090_220x220.png', width: '30', height: '30', class: 'navbar-brand rounded-circle w-50' %>
+                <% else %>
+                  <%= image_tag current_user.image, class: 'navbar-brand rounded-circle w-50' %>
+                <% end %>
+              <% end %>
+              <div class="dropdown-menu dropdown-menu-right">
+                <%= link_to 'アカウント設定', edit_user_registration_path, class: 'dropdown-item' %>
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+              </div>
             </li>
           <% else %>
             <li class="nav-item">

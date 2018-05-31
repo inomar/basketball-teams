@@ -27,6 +27,7 @@ class User < ApplicationRecord
           name:  auth.extra.raw_info.name,
           provider: auth.provider,
           uuid: auth.uid,
+          image: auth.info.image,
           email: auth.info.email,
           password: Devise.friendly_token[0,20]
       )
@@ -41,6 +42,8 @@ class User < ApplicationRecord
           name:     auth.info.nickname,
           provider: auth.provider,
           uuid:      auth.uid,
+          image: auth.info.image,
+          description: auth.info.description,
           email:    User.create_unique_email,
           password: Devise.friendly_token[0,20]
       )
