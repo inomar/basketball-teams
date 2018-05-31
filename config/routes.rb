@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/index'
-
   root 'home#index'
 
   devise_for :users, controllers: {
@@ -9,6 +7,6 @@ Rails.application.routes.draw do
       passwords: 'users/passwords',
       omniauth_callbacks: 'users/omniauth_callbacks'
   }
-  resources :users, only: %i[index show]
+  resources :users, param: :uuid, only: %i[index show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

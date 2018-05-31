@@ -5,6 +5,21 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable
 
+
+  def update_without_current_password(params, *options)
+    params.delete(:current_password)
+
+    if params[:password].blank? && params[:password_confirmation].blank?
+      params.delete(:password)
+      params.delete(:password_confirmation)
+    end
+
+    result = update_attributes(params, *options)
+    clean_up_passwords
+    result
+  end
+
+
   def self.find_for_facebook_oauth(auth, signed_in_resource = nil)
     user = User.where(provider: auth.provider, uuid: auth.uid).first
     unless user
