@@ -5,6 +5,7 @@
     "@rails/webpacker": "3.5",
     "bootstrap": "^4.1.1",
     "bootswatch": "^4.1.1",
+    "daemonite-material": "^4.1.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3"
   },
