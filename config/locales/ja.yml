@@ -1,5 +1,13 @@
 ---
 ja:
+  users:
+    position:
+      all_rounder: "オールラウンダー"
+      point_guard: "ポイントガード"
+      shooting_guard: "シューティングガード"
+      small_forward: "スモールフォワード"
+      power_forward: "パワーフォワード"
+      center: "センター"
   activerecord:
     errors:
       messages:

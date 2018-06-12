@@ -20,6 +20,14 @@
         <%= f.text_area :description, class: 'form-control' %>
       </div>
 
+      <div class="form-group">
+        <%= collection_check_boxes(:user, :position_ids, Position.all, :id, :name) do |b| %>
+          <div class="custom-control custom-checkbox">
+            <%= b.label(class: '') { b.check_box + b.text } %>
+          </div>
+        <% end %>
+      </div>
+
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>

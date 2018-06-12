@@ -4,7 +4,18 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable
+  has_and_belongs_to_many :positions
+  # has_many :user_positions
+  # has_many :positions, through: :user_positions
 
+  enum position: {
+      all_rounder: 0,
+      point_guard: 1,
+      shooting_guard: 2,
+      small_forward: 3,
+      power_forward: 4,
+      center: 5
+  }
 
   def update_without_current_password(params, *options)
     params.delete(:current_password)

@@ -49,6 +49,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def update_resource(resource, params)
     resource.update_without_current_password(params)
   end
+
+  def user_params
+    params.require(:user).permit({ position_ids: [] })
+  end
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
   #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
