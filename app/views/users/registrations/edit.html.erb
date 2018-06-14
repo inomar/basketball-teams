@@ -20,10 +20,11 @@
         <%= f.text_area :description, class: 'form-control' %>
       </div>
 
-      <div class="form-group">
+      <div class="btn-group-toggle" data-toggle="buttons">
+        <label>ポジション選択</label>
         <%= collection_check_boxes(:user, :position_ids, Position.all, :id, :name) do |b| %>
-          <div class="custom-control custom-checkbox">
-            <%= b.label(class: '') { b.check_box + b.text } %>
+          <div class="btn btn-info btn-block mb-1">
+            <%= b.check_box + b.text %>
           </div>
         <% end %>
       </div>
