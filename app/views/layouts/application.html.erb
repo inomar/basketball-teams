@@ -12,6 +12,9 @@
 
   <body>
     <%= render 'layouts/header' %>
+    <% flash.each do |k,v| %>
+      <%= content_tag(:div, v, class: "flash flash__#{k}") %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

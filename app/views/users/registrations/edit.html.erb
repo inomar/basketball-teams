@@ -22,7 +22,8 @@
 
       <div class="btn-group-toggle" data-toggle="buttons">
         <label>ポジション選択</label>
-        <%= collection_check_boxes(:user, :position_ids, Position.all, :id, :name) do |b| %>
+        <%= f.collection_check_boxes(:position_ids, Position.all, :id, :name) do |b| %>
+          <!--　TODO: style-->
           <div class="btn btn-info btn-block mb-1">
             <%= b.check_box + b.text %>
           </div>

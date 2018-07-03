@@ -4,9 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable
-  has_and_belongs_to_many :positions
-  # has_many :user_positions
-  # has_many :positions, through: :user_positions
+  # has_and_belongs_to_many :positions
+  has_many :position_user
+  has_many :positions, through: :position_user
+  accepts_nested_attributes_for :position_user, allow_destroy: true
 
   enum position: {
       all_rounder: 0,

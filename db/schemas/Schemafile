@@ -1,5 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
+require 'position_users.schema'
 require 'positions.schema'
 require 'positions_users.schema'
 require 'users.schema'

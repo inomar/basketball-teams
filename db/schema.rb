@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180612170132) do
+ActiveRecord::Schema.define(version: 20180703104116) do
+
+  create_table "position_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
+    t.bigint "position_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["position_id"], name: "index_position_users_on_position_id"
+    t.index ["user_id"], name: "index_position_users_on_user_id"
+  end
 
   create_table "positions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -46,4 +55,6 @@ ActiveRecord::Schema.define(version: 20180612170132) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "position_users", "positions"
+  add_foreign_key "position_users", "users"
 end
