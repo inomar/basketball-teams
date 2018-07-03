@@ -1,1 +1,6 @@
 <h1><%= @user.name %></h1>
+<ul>
+  <% @user.positions.each do |position| %>
+    <li><%= position.name %></li>
+  <% end %>
+</ul>
