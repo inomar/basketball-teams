@@ -1,6 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-create_table "positions_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+create_table "positions_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
   t.integer "user_id"
   t.integer "position_id"
 end

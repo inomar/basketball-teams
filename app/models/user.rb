@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :position_user
   has_many :positions, through: :position_user
   accepts_nested_attributes_for :position_user, allow_destroy: true
+  has_one_attached :avatar
 
   enum position: {
       all_rounder: 0,
