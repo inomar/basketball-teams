@@ -9,3 +9,10 @@
 <% else %>
   <%= image_tag 'https://pics.prcm.jp/638bee63bc5e4/72592090/png/72592090_220x220.png', width: '150', height: '150', class: 'rounded-circle' %>
 <% end %>
+
+<h2>所属チーム</h2>
+<ul>
+  <% @user.teams.each do |team| %>
+    <li><%= team.name %></li>
+  <% end %>
+</ul>

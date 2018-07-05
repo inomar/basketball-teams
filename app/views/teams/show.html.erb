@@ -1,0 +1,8 @@
+<h1><%= @team.name %></h1>
+<% if @team.background.attached? %>
+  <%= image_tag @team.background.variant(resize: "400x300") %>
+<% end %>
+
+<% if @team.logo.attached? %>
+  <%= image_tag @team.logo.variant(resize: "400x300") %>
+<% end %>

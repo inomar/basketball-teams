@@ -1,0 +1,10 @@
+<%= form_with model: @team, local: false do |f| %>
+  <div>
+    <%= f.text_field :name %>
+  </div>
+
+    <%= f.file_field :logo %>
+    <%= f.file_field :background %>
+
+  <%= f.submit '作成' %>
+<% end %>
