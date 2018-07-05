@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable
   # has_and_belongs_to_many :positions
+  has_many :team_user
+  has_many :teams, through: :team_user
   has_many :position_user
   has_many :positions, through: :position_user
   accepts_nested_attributes_for :position_user, allow_destroy: true

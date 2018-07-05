@@ -24,3 +24,5 @@ end
 
 add_foreign_key "position_users", "positions"
 add_foreign_key "position_users", "users"
+add_foreign_key "team_users", "teams"
+add_foreign_key "team_users", "users"
