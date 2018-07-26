@@ -1,10 +1,8 @@
-<%= form_with model: @team, local: false do |f| %>
-  <div>
-    <%= f.text_field :name %>
+<div class="container">
+  <div class="p-signup__form py-3 px-4">
+    <%= form_with model: @team, local: false do |f| %>
+      <%= render 'teams/form', f: f %>
+      <%= f.submit '作成' %>
+    <% end %>
   </div>
-
-    <%= f.file_field :logo %>
-    <%= f.file_field :background %>
-
-  <%= f.submit '作成' %>
-<% end %>
+</div>

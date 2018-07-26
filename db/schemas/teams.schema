@@ -4,6 +4,7 @@ create_table "teams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cas
   t.string "name", default: "", null: false
   t.string "uid", default: "", null: false
   t.text "description"
+  t.integer "address_id"
   t.datetime "created_at", null: false
   t.datetime "updated_at", null: false
   t.index ["uid"], name: "index_teams_on_uid", unique: true

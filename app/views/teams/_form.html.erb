@@ -1,0 +1,22 @@
+<div class="form-group">
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+  <%= f.label :description %>
+  <%= f.text_area :name, class: 'form-control' %>
+</div>
+
+<div class="custom-control custom-switch">
+  <input class="custom-control-input" id="customSwitch" type="checkbox">
+  <span class="custom-control-track"></span>
+  <label class="custom-control-label" for="customSwitch">Toggle this custom switch</label>
+</div>
+
+<div class="form-group">
+  <%= f.select :address_id, Address.all.map{|address| [address.name, address.id]} %>
+</div>
+
+<%= f.file_field :logo %>
+<%= f.file_field :background %>

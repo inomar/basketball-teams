@@ -3,4 +3,5 @@ class Team < ApplicationRecord
   has_many :users, through: :team_user
   has_one_attached :logo
   has_one_attached :background
+  belongs_to :address
 end

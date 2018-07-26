@@ -1,18 +1,38 @@
-<h1><%= @user.name %></h1>
-<ul>
-  <% @user.positions.each do |position| %>
-    <li><%= position.name %></li>
-  <% end %>
-</ul>
-<% if @user.avatar.attached? %>
-  <%= image_tag @user.avatar.variant(resize: "150x150"), class: 'rounded-circle' %>
-<% else %>
-  <%= image_tag 'https://pics.prcm.jp/638bee63bc5e4/72592090/png/72592090_220x220.png', width: '150', height: '150', class: 'rounded-circle' %>
-<% end %>
-
-<h2>所属チーム</h2>
-<ul>
-  <% @user.teams.each do |team| %>
-    <li><%= team.name %></li>
-  <% end %>
-</ul>
+<div class="jumbotron">
+  <div class="container">
+    <div class="text-center">
+      <% if @user.avatar.attached? %>
+        <%= image_tag @user.avatar.variant(resize: "100x100"), class: 'rounded-circle' %>
+      <% else %>
+        <%= image_tag 'https://pics.prcm.jp/638bee63bc5e4/72592090/png/72592090_220x220.png', width: '100', height: '100', class: 'rounded-circle' %>
+      <% end %>
+      <h1 class="display-4"><%= @user.name %></h1>
+      <p class="lead"><%= @user.description %></p>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <div class="container">
+    <h2 class="display-4">ポジション</h2>
+    <ul>
+      <% @user.positions.each do |position| %>
+        <li><%= position.id %><%= position.name %></li>
+      <% end %>
+    </ul>
+    <h2 class="display-4">所属チーム</h2>
+    <ul>
+      <% @user.teams.each do |team| %>
+        <li>
+          <%= link_to team_path(team.uid) do %>
+            <% if team.logo.attached? %>
+              <%= image_tag team.logo.variant(resize: "25x25"), class: 'rounded-circle' %>
+            <% end %>
+            <%= team.name %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+    </div>
+  </div>
+</div>
